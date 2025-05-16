@@ -29,7 +29,7 @@ app.use(cors(corsOptions));
 app.use(cookieParser());
 
 //========routers========
-app.use("users", userRouter);
+app.use("/users", userRouter);
 //=========last==========
 app.use(errorHandler);
 
