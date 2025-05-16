@@ -14,9 +14,8 @@ TECHIN study center practical exam
 
 ## Abstract
 
-This project is a fullstack application that enables users to create, edit, favourite and comment on different adverts, which promote users' products or services.
-Users can create listings with image uploads, rate products, and leave reviews on purchased items.
-Administrators have full access to user and system management features, including user moderation and role assignment.
+This project is a fullstack application that enables users to create, edit and delete different adverts, which promote users' products or services.
+Users can also add an image to their product. User authentication uses multiple password hashing steps and cryptographic salt.
 
 ## Installation
 

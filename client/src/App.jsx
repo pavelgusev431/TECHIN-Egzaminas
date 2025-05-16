@@ -1,15 +1,19 @@
 import { Routes, Route } from "react-router";
 import Auth from "./components/layout/Auth.jsx";
-import Home from "./components/layout/Home.jsx";
 import NotFound from "./components/layout/NotFound.jsx";
+import NavBar from "./components/layout/Navbar.jsx";
+import ProtectedRoutes from "./components/ProtectedRoutes.jsx";
 
 const App = () => {
   return (
-    <Routes>
-      <Route index element={<Auth />} />
-      <Route path="home" element={<Home />} />
-      <Route path="*" element={<NotFound />} />
-    </Routes>
+    <>
+      <NavBar />
+      <Routes>
+        <Route index element={<Auth />} />
+        {ProtectedRoutes()}
+        <Route path="*" element={<NotFound />} />
+      </Routes>
+    </>
   );
 };
 

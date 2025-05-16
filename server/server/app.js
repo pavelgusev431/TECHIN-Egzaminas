@@ -6,6 +6,8 @@ import dotenv from 'dotenv';
 import cookieParser from 'cookie-parser';
 //routers
 import userRouter from "../routers/userRouter.js";
+import categoryRouter from "../routers/categoryRouter.js";
+import productRouter from "../routers/productRouter.js";
 
 dotenv.config();
 /**@type {string}*/
@@ -30,6 +32,8 @@ app.use(cookieParser());
 
 //========routers========
 app.use("/users", userRouter);
+app.use("/categories", categoryRouter);
+app.use("/products", productRouter);
 //=========last==========
 app.use(errorHandler);
 
